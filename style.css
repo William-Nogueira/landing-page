@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+    color: #3c4858;
+}
+
+p {
+   color: #8c98a4;
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 67.2px;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 70rem;
+    margin: auto;
+}
+
+nav {
+    position: fixed;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.nav div {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-list li {
+    padding: 25px 10px;
+}
+
+.nav-list a {
+    font-size: 13px;
+    color: #3c4858;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-list a:hover {
+   color: rgba(50,116,240,0.9);
+}
+
+main {
+    padding-top: 230px;
+    background-image: url(./img/background1.png);
+    background-position: center;
+    background-color: #f7f8fa
+}
+
+main > div {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.empresaria {
+    max-width: 60%;
+    height: auto;
+}
