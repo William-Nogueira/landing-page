@@ -7,15 +7,15 @@
 }
 
 h1, h2, h3 {
-    color: #3c4858;
+    color: #384352;
 }
 
 p {
-   color: #8c98a4;
+   color: #77828b;
 }
 
 h1 {
-    font-size: 56px;
+    font-size: 58px;
     line-height: 67.2px;
     font-weight: 700;
 }
@@ -29,20 +29,23 @@ a {
     margin: auto;
 }
 
-nav {
-    position: fixed;
+.container-nav {
+    max-width: 75rem;
     margin: auto;
+}
+
+nav {
+    position: absolute;
     right: 0;
     left: 0;
-    top: 0;
-    z-index: 999;
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
-    margin: 40px 0;
+    margin: 15px auto;
 }
+
 
 .nav div {
     display: flex;
@@ -60,7 +63,7 @@ nav {
 }
 
 .nav-list a {
-    font-size: 13px;
+    font-size: 14px;
     color: #3c4858;
     letter-spacing: 1px;
     font-weight: 600;
@@ -68,14 +71,15 @@ nav {
 }
 
 .nav-list a:hover {
-   color: rgba(50,116,240,0.9);
+   color: rgb(18, 92, 204);
 }
 
 main {
-    padding-top: 230px;
+    padding-top: 180px;
     background-image: url(./img/background1.png);
     background-position: center;
-    background-color: #f7f8fa
+    background-color: #f7f8fa;
+    padding-bottom: 30px;
 }
 
 main > div {
@@ -86,6 +90,43 @@ main > div {
 }
 
 .empresaria {
-    max-width: 60%;
-    height: auto;
+    max-width: 103%;
+}
+
+.main-container {
+    max-width: 70rem;
+    margin: auto;
+    display: flex;
+    gap: 35px;
+}
+
+.main-text {
+    width: 700px;
+    position: relative;
+    top: -50px;
+}
+
+.main-text p {
+    margin: 35px 0 75px 0;
+    font-size: 18px;
+}
+
+.main-img {
+    width: 650px;
+}
+
+.main-button {
+    padding: 20px 52px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    background: rgb(6, 46, 105);
+    border: 1px solid #010b1f ;
+    color: #fff ;
+    box-shadow: 0 3px 5px 0 rgb(50 116 240 / 30%);
+    font-size: 18px;
+}
+
+.main-button:hover {
+    background: rgb(9, 63, 143);
+    border: 1px solid rgb(6, 41, 95)
 }
