@@ -6,28 +6,32 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth
+}
+
 h1, h2, h3 {
     color: #2f3844;
 }
 
 p {
-   color: #77828b;
+   color: #606970;
 }
 
 h1 {
-    font-size: 58px;
+    font-size: 3.625rem;
     line-height: 67.2px;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 38px;
+    font-size: 2.375rem;
     line-height: 67.2px;
     font-weight: 700;
 }
 
 h3 {
-    font-size: 21px;
+    font-size: 1,3125rem;
     line-height: 67.2px;
     font-weight: 700;
 }
@@ -36,15 +40,20 @@ a {
     text-decoration: none;
 }
 
+li {
+    color: #3d474e;
+}
+
 .container {
-    max-width: 70rem;
+    max-width: 1120px;
     margin: auto;
 }
+
 
 /* Navigation Bar */
 
 .container-nav {
-    max-width: 75rem;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -77,7 +86,7 @@ nav {
 }
 
 .nav-list a {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #3c4858;
     letter-spacing: 1px;
     font-weight: 600;
@@ -105,12 +114,13 @@ main > div {
     justify-content: center;
 }
 
-.empresaria {
+.empresaria-img {
     max-width: 103%;
+    border-radius: 8px;
 }
 
 .main-container {
-    max-width: 70rem;
+    max-width: 1120px;
     margin: auto;
     display: flex;
     gap: 35px;
@@ -119,12 +129,12 @@ main > div {
 .main-text {
     width: 700px;
     position: relative;
-    top: -50px;
+    top: -35px;
 }
 
 .main-text p {
     margin: 35px 0 75px 0;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .main-img {
@@ -135,22 +145,22 @@ main > div {
     padding: 20px 52px;
     letter-spacing: 0.5px;
     transition: all 0.3s;
-    background: rgb(6, 46, 105);
-    border: 1px solid #010b1f ;
+    background: #083b86;
+    border: 1px solid #031f57 ;
     color: #fff ;
     box-shadow: 0 3px 5px 0 rgb(50 116 240 / 30%);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .main-button:hover {
-    background: rgb(9, 63, 143);
-    border: 1px solid rgb(6, 41, 95)
+    background: #0c4cac;
+    border: 1px solid rgb(10, 62, 139)
 }
 
-/* Section 1 */
+/* Finanças da Maneira Certa */
 
 section {
-    padding: 80px 0 100px;
+    padding-top: 80px;
 }
 
 .container-header {
@@ -160,7 +170,7 @@ section {
 }
 
 .container-header p {
-    font-size: 17px;
+    font-size: 1.125rem;
 }
 
 .container-servicos {
@@ -173,13 +183,88 @@ section {
 }
 
 .container-items h3 {
-    margin: 5px 0;
+    margin-bottom: 12px;
+    position: relative;
+    top: -25px;
 }
 
 .container-items p {
-    font-size: 16px;
+    font-size: 1rem;
+    position: relative;
+    top: -25px;
 }
 
 .container-items img {
-    width: 80%;
+    width: 83%;
+}
+
+/* Invista conosco */
+
+#Invista {
+    padding-top: 80px;
+}
+
+.container-invista-conosco{
+    display: flex;
+    gap: 75px;
+}
+
+.escritorio-img {
+    width: 430px;
+    height: 530px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.invista-conosco {
+    padding-top: 26px;
+}
+
+.invista-conosco h2 {
+    margin-bottom: 15px;
+}
+
+.invista-conosco ul {
+    margin: 32px 0 66px;
+    list-style: none;
+}
+
+.invista-conosco li {
+    margin: 6px 0;
+    position: relative;
+}
+
+.invista-conosco li:before  {
+    content: "";
+    background-image: url("img/checkmark.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: -30px;
+    top: 51%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.mais-informacoes-button {
+    padding: 14px 42px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    background: #083b86;
+    border: 1px solid #031f57 ;
+    color: #fff ;
+    box-shadow: 0 3px 5px 0 rgb(50 116 240 / 30%);
+    font-size: 1rem;
+}
+
+.mais-informacoes-button:hover {
+    background: #0c4cac;
+    border: 1px solid rgb(10, 62, 139)
+}
+
+/* Notícias */
+
+#Noticias {
+    padding-top: 80px;
 }
