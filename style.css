@@ -10,7 +10,7 @@ html {
     scroll-behavior: smooth
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     color: #2f3844;
 }
 
@@ -31,7 +31,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1,3125rem;
+    font-size: 1.35rem;
     line-height: 67.2px;
     font-weight: 700;
 }
@@ -77,12 +77,8 @@ nav {
 
 .nav-list {
     display: flex;
-    gap: 35px;
+    gap: 15px;
     list-style: none;
-}
-
-.nav-list li {
-    padding: 25px 10px;
 }
 
 .nav-list a {
@@ -91,6 +87,7 @@ nav {
     letter-spacing: 1px;
     font-weight: 600;
     transition: 0.3s;
+    padding: 25px 25px;
 }
 
 .nav-list a:hover {
@@ -202,6 +199,7 @@ section {
 
 #Invista {
     padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .container-invista-conosco{
@@ -266,5 +264,46 @@ section {
 /* Notícias */
 
 #Noticias {
-    padding-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    background-color: #f7f8fa;
+}
+
+.noticia-img {
+    width: 357px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.container-noticias {
+    display: flex;
+    gap: 25px;
+}
+
+.article-noticias {
+    box-shadow: 0 0 3px rgb(60 72 88 / 15%);
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.175);
+    border-radius: 8px;
+    flex: 1;
+    background-color: #fff;
+}
+
+.article-noticias:hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+
+.article-noticias-info {
+    padding: 20px;
+}
+
+.article-noticias-titulo {
+    padding-bottom: 15px;
+}
+
+.article-noticias-descricao {
+    padding-bottom: 30px;
 }
