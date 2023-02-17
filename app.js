@@ -1,49 +1,47 @@
-document.addEventListener('DOMContentLoaded', () => {
+fetch('https://gnews.io/api/v4/top-headlines?category=business&max=3&apikey=7610a7b76d2a0fa633f65b8f3227dad3&lang=pt&country=br')
+    .then(response => response.json())
+    .then(data => {
+        const newsSection = document.querySelector('.container-noticias');
 
-    fetch('https://newsapi.org/v2/top-headlines?country=br&category=business&apiKey=2f2fb6675e1f4ccf9daa732c5c3d9fc2')
-        .then(response => response.json())
-        .then(data => {
-            const newsSection = document.querySelector('.container-noticias');
+        data.articles.slice(0, 3).forEach(articles => {
+            const articleElement = document.createElement('a');
+            articleElement.href = articles.url;
+            articleElement.target = '_blank';
+            articleElement.classList.add('article-noticias');
 
-            data.articles.slice(0, 3).forEach(article => {
-                const articleElement = document.createElement('a');
-                articleElement.href = article.url;
-                articleElement.target = '_blank';
-                articleElement.classList.add('article-noticias');
+            // Imagem
+            const imageElement = document.createElement('img');
+            imageElement.classList.add('noticia-img');
+            imageElement.src = articles.image;
+            articleElement.appendChild(imageElement);
 
-                // Imagem
-                if (article.urlToImage) {
-                    const imageElement = document.createElement('img');
-                    imageElement.classList.add('noticia-img');
-                    imageElement.src = article.urlToImage;
-                    imageElement.onerror = function() {
-                        this.src = './img/placeholder.jpg';
-                    };
-                    articleElement.appendChild(imageElement);
-                }
+            // Div para Titulo e descrição
+            const articleInfoElement = document.createElement('div');
+            articleInfoElement.classList.add('article-noticias-info');
+            articleElement.appendChild(articleInfoElement);
 
-                // Div para Titulo e descrição
-                const articleInfoElement = document.createElement('div');
-                articleInfoElement.classList.add('article-noticias-info');
-                articleElement.appendChild(articleInfoElement);
+            // Fonte
+            const fonteElement = document.createElement('h5');
+            fonteElement.classList.add('article-noticias-fonte');
+            fonteElement.textContent = articles.source.name;
+            articleInfoElement.appendChild(fonteElement);
 
-                // Titulo
-                const titleElement = document.createElement('h4');
-                titleElement.classList.add('article-noticias-titulo');
-                titleElement.textContent = article.title;
-                articleInfoElement.appendChild(titleElement);
+            // Titulo
+            const titleElement = document.createElement('h4');
+            titleElement.classList.add('article-noticias-titulo');
+            titleElement.textContent = articles.title;
+            articleInfoElement.appendChild(titleElement);
 
-                // Descrição
-                const descriptionElement = document.createElement('p');
-                descriptionElement.classList.add('article-noticias-descricao');
-                descriptionElement.textContent = article.description;
-                articleInfoElement.appendChild(descriptionElement);
+            // Descrição
+            const descriptionElement = document.createElement('p');
+            descriptionElement.classList.add('article-noticias-descricao');
+            descriptionElement.textContent = articles.description;
+            articleInfoElement.appendChild(descriptionElement);
 
-                newsSection.appendChild(articleElement);
-            });
-        })
-
-        .catch(error => {
-            console.error('Erro:', error);
+            newsSection.appendChild(articleElement);
         });
-});
+    })
+
+    .catch(error => {
+        console.error('Erro:', error);
+    });
