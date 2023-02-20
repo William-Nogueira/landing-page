@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+/* Váriaveis globais */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -80,7 +82,7 @@ li {
 }
 
 
-/* Navigation Bar */
+/* Nav Bar */
 
 .container-nav {
     max-width: 1300px;
@@ -179,7 +181,7 @@ nav {
     .nav-list.active {
         right: 0;
     }
-    
+
 }
 
 /* Main */
@@ -278,6 +280,7 @@ main>div {
     .main-img {
         width: 98%;
     }
+
     .empresaria-img {
         width: 100%;
     }
@@ -322,6 +325,7 @@ section {
     section {
         padding-top: 50px;
     }
+
     section h2 {
         padding-bottom: 8px;
     }
@@ -386,6 +390,13 @@ section {
 .container-invista-conosco {
     display: flex;
     gap: 40px;
+    margin-bottom: -30px;
+}
+
+@media (max-width: 1000px) {
+    .container-invista-conosco {
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 600px) {
@@ -415,7 +426,7 @@ section {
 
 .escritorio-img {
     width: 95%;
-    height: 80%;
+    height: 85%;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -515,7 +526,7 @@ section {
     border: 1px solid rgb(10, 62, 139)
 }
 
-/* Notícias */
+/* Últimas Notícias */
 
 #Noticias {
     padding-top: 60px;
@@ -527,6 +538,7 @@ section {
     #Noticias {
         padding-top: 50px;
     }
+
     #Noticias h2 {
         padding-bottom: 8px;
     }
@@ -597,3 +609,77 @@ section {
         overflow: scroll;
     }
 }
+
+/* Ficou com alguma dúvida? */
+
+#Duvidas {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#Duvidas h2 {
+    text-align: center;
+}
+
+#Duvidas>div>p {
+    padding-bottom: 35px;
+    text-align: center;
+}
+
+.duvidas-container {
+    padding: 15px 0;
+    border-radius: 1rem;
+}
+
+.duvidas-item {
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.duvidas-icone {
+    display: grid;
+    place-items: center;
+}
+
+.duvidas-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 18px 22px;
+    background: white;
+    border: none;
+    color: #2f3844;
+    font-size: 1.2rem;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.duvidas-button:hover {
+    color: rgb(17, 82, 180);
+    background: #f8f8ff;
+}
+
+.duvidas-item-active .duvidas-button {
+    color: rgb(17, 82, 180);
+    background: #f8f8ff;
+}
+
+.duvidas-text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.duvidas-text p {
+    padding: 20px 28px 18px;
+}
+
+.duvidas-item-active .duvidas-text {
+    opacity: 1;
+    max-height: 100vh;
+}
+
+/* Footer */
+
