@@ -1,6 +1,6 @@
 // API 
 
-fetch('https://gnews.io/api/v4/search?q=mercado%20financeiro&max=3&apikey=7610a7b76d2a0fa633f65b8f3227dad3&lang=pt&country=br')
+fetch('https://gnews.io/api/v4/search?q=financas&max=3&apikey=7610a7b76d2a0fa633f65b8f3227dad3&lang=pt&country=br')
     .then(response => response.json())
     .then(data => {
         const newsSection = document.querySelector('.container-noticias');

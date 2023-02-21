@@ -36,7 +36,6 @@ h1 {
 @media (max-width: 600px) {
     h1 {
         font-size: 2.5rem;
-        line-height: 47.2px;
     }
 }
 
@@ -144,7 +143,7 @@ nav {
     background-color: #3c4858;
 }
 
-@media(max-width:800px) {
+@media(max-width:960px) {
     .hamburger {
         display: block;
     }
@@ -194,11 +193,12 @@ main {
     padding-bottom: 30px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     main {
         padding-top: 100px;
         background-position: left;
         padding-bottom: 15px;
+        background-repeat: no-repeat;
     }
 }
 
@@ -227,7 +227,7 @@ main>div {
     gap: 35px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .main-container {
         flex-direction: column;
         max-width: 100%;
@@ -247,7 +247,13 @@ main>div {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+    .main-text h1 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 800px) {
     .main-text {
         display: flex;
         flex-direction: column;
@@ -265,7 +271,7 @@ main>div {
     font-size: 1.125rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .main-text p {
         font-size: 1.055rem;
         margin: 25px 0 45px 0;
@@ -274,6 +280,16 @@ main>div {
 
 .main-img {
     width: 60%;
+}
+
+@media (max-width: 800px) {
+    .main-img {
+        width: 70%;
+    }
+
+    .empresaria-img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -614,7 +630,7 @@ section {
 
 #Duvidas {
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 140px;
 }
 
 #Duvidas h2 {
@@ -627,7 +643,7 @@ section {
 }
 
 .duvidas-container {
-    padding: 15px 0;
+    padding-top: 15px;
     border-radius: 1rem;
 }
 
@@ -648,7 +664,7 @@ section {
     padding: 18px 22px;
     background: white;
     border: none;
-    color: #2f3844;
+    color: #28303a;
     font-size: 1.2rem;
     text-align: left;
     cursor: pointer;
@@ -656,12 +672,19 @@ section {
 }
 
 .duvidas-button:hover {
-    color: rgb(17, 82, 180);
+    color: rgb(19, 76, 161);
     background: #f8f8ff;
 }
 
+@media (max-width: 1200px) {
+    .duvidas-button:hover {
+        background: white;
+        color: #2f3844;
+    }
+}
+
 .duvidas-item-active .duvidas-button {
-    color: rgb(17, 82, 180);
+    color: rgb(19, 76, 161);
     background: #f8f8ff;
 }
 
@@ -683,3 +706,84 @@ section {
 
 /* Footer */
 
+Footer {
+    background-color: #1e273e;
+    padding: 70px 0 35px;
+}
+
+.container-footer {
+    display: flex;
+    gap: 15px;
+    padding: 0 40px 40px;
+}
+
+@media (max-width: 675px) {
+    .container-footer {
+        flex-wrap: wrap;
+    }
+    .container-footer div {
+        min-width: 130px;
+        padding-bottom: 20px;
+    }
+}
+
+.container-footer div {
+    flex: 1;
+}
+
+.container-footer p {
+    color: #f7f8fa;
+    margin-bottom: 24px;
+}
+
+.container-footer a {
+    color: #8890a4;
+    transition: 0.2s ease;
+}
+
+.container-footer a:hover {
+    color: #c2c6d0;
+}
+
+.container-footer ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.container-footer li {
+    margin-bottom: 10px;
+}
+
+.social-media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-self: baseline;
+    justify-content: center;
+}
+
+.container-footer img {
+    height: 28px;
+    width: 28px;
+    margin: auto;
+    display: block;
+}
+
+.footer-text {
+    text-align: right;
+}
+
+@media (max-width: 675px) {
+    .footer-text {
+        text-align: center;
+    }
+}
+
+.footer-text a {
+    color: #8890a4;
+    transition: 0.2s ease;
+}
+
+.footer-text a:hover {
+    color: #c2c6d0;
+}
