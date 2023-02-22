@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic');
 
 /* Váriaveis globais */
 
@@ -331,6 +332,186 @@ main>div {
     border: 1px solid rgb(10, 62, 139)
 }
 
+/* Modal */
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.modal-container form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    max-width: 650px;
+    width: 100%;
+}
+
+@media (max-width: 750px) {
+    .modal-container form {
+        width: 90%;
+    }
+}
+
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact input[type="datetime"] {
+    font: 400 1rem "Roboto", sans-serif;
+}
+
+.radio {
+    margin: 14px 0 36px;
+}
+
+#contact input[type="radio"] {
+    height: 19px;
+    width: 19px;
+    transition: all 0.3s;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: #083b86;
+}
+
+#contact label[for="sim"] {
+    font: 400 1rem;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#contact label[for="nao"] {
+    font: 400 1rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#contact {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 150px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#contact h4 {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+fieldset {
+    border: medium none;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact input[type="datetime"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover {
+    transition: 0.2s ease-in-out;
+    border: 1px solid rgb(139, 139, 139);
+}
+
+#contact button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    height: 55px;
+    border: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    background: #083b86;
+    border: 1px solid #031f57;
+    color: #fff;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 1.05rem;
+}
+
+#contact button[type="submit"]:hover {
+    background: #0c4cac;
+    border: 1px solid rgb(10, 62, 139);
+}
+
+#contact button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus {
+    outline: 0;
+    border: 1px solid rgb(139, 139, 139);
+}
+
+@media (max-width: 1200px) {
+    #contact {
+        padding: 5px 20px 18px;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    #contact h4 {
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact input[type="tel"],
+    #contact input[type="url"],
+    #contact input[type="datetime"],
+    #contact label {
+        font: 400 0.8rem "Roboto", sans-serif;
+    }
+
+    .radio {
+        margin-bottom: 18px;
+    }
+
+    fieldset {
+        margin-bottom: 0;
+    }
+
+    #contact button[type="submit"] {
+        height: 100%;
+    }
+}
+
+
 /* Finanças da Maneira Certa */
 
 section {
@@ -350,7 +531,7 @@ section {
 .container-header {
     margin: 0 auto 50px;
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 @media (max-width: 1200px) {
@@ -362,6 +543,12 @@ section {
 
 .container-header p {
     font-size: 1.125rem;
+}
+
+@media (max-width: 675px) {
+    .container-header p {
+        font-size: 1rem;
+    }
 }
 
 .container-servicos {
@@ -400,7 +587,7 @@ section {
 /* Invista conosco */
 
 #Invista {
-    padding-top: 80px;
+    padding-top: 110px;
 }
 
 .container-invista-conosco {
@@ -457,7 +644,7 @@ section {
 }
 
 .invista-conosco {
-    padding-top: 26px;
+    padding-top: 32px;
     flex: 2;
 }
 
@@ -560,6 +747,28 @@ section {
     }
 }
 
+.noticias-header {
+    margin: 0 auto 50px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 1200px) {
+    .noticias-header {
+        margin: 0 auto 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.noticias-header p {
+    font-size: 1.125rem;
+}
+
+@media (max-width: 675px) {
+    .noticias-header p {
+        font-size: 1rem;
+    }
+}
 
 .noticia-img {
     width: 100%;
@@ -613,10 +822,6 @@ section {
 }
 
 @media (max-width: 675px) {
-    .container-header p {
-        font-size: 1rem;
-    }
-
     .container-noticias a:nth-child(3) {
         flex: 1;
     }
@@ -721,6 +926,7 @@ Footer {
     .container-footer {
         flex-wrap: wrap;
     }
+
     .container-footer div {
         min-width: 130px;
         padding-bottom: 20px;

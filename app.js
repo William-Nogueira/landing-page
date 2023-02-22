@@ -1,6 +1,6 @@
 // API 
 
-fetch('https://gnews.io/api/v4/search?q=financas&max=3&apikey=7610a7b76d2a0fa633f65b8f3227dad3&lang=pt&country=br')
+fetch('https://gnews.io/api/v4//top-headlines?category=business&max=3&apikey=7610a7b76d2a0fa633f65b8f3227dad3&lang=pt&country=br')
     .then(response => response.json())
     .then(data => {
         const newsSection = document.querySelector('.container-noticias');
@@ -48,7 +48,7 @@ fetch('https://gnews.io/api/v4/search?q=financas&max=3&apikey=7610a7b76d2a0fa633
         console.error('Erro:', error);
     });
 
-// Hamburger Menu
+// Menu Hamburger
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-list");
@@ -63,13 +63,30 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     navMenu.classList.remove("active");
 }))
 
-// Dúvidas
+// Abra sua Conta - Modal
+
+const modalContainer = document.querySelector(".modal-container");
+const signupButton = document.querySelector(".modal");
+
+signupButton.addEventListener('click', function () {
+    modalContainer.style.display = 'block';
+    setTimeout(() => modalContainer.style.opacity = '1', 0);
+});
+
+modalContainer.addEventListener('mousedown', function (e) {
+    if (e.target === modalContainer) {
+        modalContainer.style.opacity = '0';
+        setTimeout(() =>  modalContainer.style.display = 'none', 300);
+    }
+});
+
+// Dúvidas - Accordion
 
 const duvItems = document.querySelectorAll(".duvidas-item");
 
 duvItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    item.classList.toggle("duvidas-item-active");
-  });
+    item.addEventListener("click", () => {
+        item.classList.toggle("duvidas-item-active");
+    });
 });
 

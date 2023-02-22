@@ -43,13 +43,52 @@
                 <h1>Invista em Seu Futuro</h1>
                 <p>A Nogueira Investimentos oferece opções de aplicações diversificadas e planejamento financeiro
                     personalizado para ajudar você a alcançar suas metas de longo prazo. </p>
-                <a class="main-button" href="#">Abra sua Conta</a>
+                <a class="main-button modal" href="#">Abra sua Conta</a>
             </div>
             <div class="main-img">
                 <img class="empresaria-img" src="./img/empresaria.jpg" alt="Empresária">
             </div>
         </div>
     </main>
+
+    <!-- Modal -->
+
+    <div class="modal-container">
+        <form id="contact" action="" method="get">
+            <h2>Abra sua Conta</h3>
+            <h4>Dados Pessoais</h4>
+            <fieldset>
+                <label for="name">Nome Completo</label>
+                <input placeholder="Nome" type="text" name="name" id="name" tabindex="1" required autofocus></input>
+            </fieldset>
+            <fieldset>
+                <label for="Email">Email</label>
+                <input placeholder="Email" type="email" id="email" tabindex="2" required></input>
+            </fieldset>
+            <fieldset>
+                <label for="celular">Celular</label>
+                <input placeholder="(00) 00000-0000" type="tel" id="celular" pattern="\([0-9]{2}\) [0-9]{5}\-[0-9]{4}" tabindex="3"></input>
+            </fieldset>
+            <fieldset>
+                <label for="cpf">CPF</label>
+                <input placeholder="(000.000.000-00)" type="text" name="cpf" id="cpf" pattern="^(\d{2}\.?\d{3}\.?\d{3}\/?\d{4}-?\d{2}|\d{3}\.?\d{3}\.?\d{3}-?\d{2})$" tabindex="4" required></input>
+            </fieldset>
+            <fieldset>
+                <label for="data">Data de Nascimento</label>
+                <input placeholder="(31/12/1970)" pattern="\d{2}[\/-]\d{2}[\/-]\d{4}" type="datetime" tabindex="5" required></input>
+            </fieldset>
+            <fieldset class="radio">
+                <h4>Você já possui um assessor?</h4>
+                <input type="radio" name="assessor" value="sim" id="sim" required>
+                <label for="sim">Sim</label>
+                <input type="radio" name="assessor" value="nao" id="nao" required>
+                <label for="nao">Não</label>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="....Enviando">Cadastrar</button>
+            </fieldset>
+        </form>
+    </div>
 
     <!-- Finanças da Maneira Certa -->
 
@@ -108,7 +147,7 @@
                     </ul>
                 </div>
                 <div class="invista-button">
-                    <a href="#" class="mais-informacoes-button">Mais Informações</a>
+                    <a href="#Duvidas" class="mais-informacoes-button">Mais Informações</a>
                 </div>
             </div>
         </div>
@@ -141,9 +180,7 @@
                         <span class="duvidas-icone"><img src="./img/expand.png" alt=""></span>
                     </button>
                     <div class="duvidas-text">
-                        <p>Para abrir sua conta é preciso ter em mãos algum documento pessoal, como RG, CPF, CNH ou RNE.
-                            <br>
-                            Basta acessar o formulário de cadastro e preencher os dados solicitados. O processo é
+                        <p>Basta acessar o formulário de cadastro e preencher os dados solicitados. O processo é
                             totalmente online, rápido e 100% grátis!
                         </p>
                     </div>
@@ -206,17 +243,17 @@
             <div>
                 <p>Investimentos</p>
                 <ul>
-                    <li><a href="#">Ações</a></li>
-                    <li><a href="#">Futuros</a></li>
-                    <li><a href="#">Fundos Imobiliários</a></li>
-                    <li><a href="#">Renda Fixa</a></li>
+                    <li><a href="#Home">Ações</a></li>
+                    <li><a href="#Home">Futuros</a></li>
+                    <li><a href="#Home">Fundos Imobiliários</a></li>
+                    <li><a href="#Home">Renda Fixa</a></li>
                 </ul>
             </div>
             <div>
                 <p>Conteúdos</p>
                 <ul>
-                    <li><a href="#">Termos de Serviço</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#Home">Termos de Serviço</a></li>
+                    <li><a href="#Home">Política de Privacidade</a></li>
                     <li><a href="https://www.linkedin.com/in/william-nogueira-dev/" target="_blank">Contate-nos</a></li>
                 </ul>
             </div>
