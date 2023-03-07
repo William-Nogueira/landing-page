@@ -85,7 +85,7 @@ li {
 /* Nav Bar */
 
 .container-nav {
-    max-width: 1300px;
+    max-width: 1340px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -106,14 +106,14 @@ nav {
 
 .nav-list {
     display: flex;
-    gap: 15px;
+    gap: 9px;
     list-style: none;
 }
 
-.nav-list a {
-    font-size: 0.875rem;
+.nav-link {
+    font-size: 0.95rem;
     color: #3c4858;
-    letter-spacing: 1px;
+    letter-spacing: 0.75px;
     font-weight: 600;
     transition: 0.3s;
     padding: 25px 0 25px 50px;
@@ -125,7 +125,7 @@ nav {
     }
 }
 
-.nav-list a:hover {
+.nav-link:hover {
     color: rgb(18, 92, 204);
 }
 
@@ -735,6 +735,10 @@ section {
     padding-top: 60px;
     padding-bottom: 80px;
     background-color: #f7f8fa;
+}
+
+.noticias-width {
+    max-width: 1245px;
 }
 
 @media (max-width: 1200px) {
