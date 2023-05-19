@@ -8,5 +8,5 @@ Live - https://nogueirainvest.netlify.app/
 
 <br>
 <div align="center">
-<img alt="NogueiraInvest" width="500px" src="https://i.ibb.co/Nmj6414/127-0-0-1-5500-My-Projects-Nogueira-Landing-Page-index-html.png"/>
+<img alt="NogueiraInvest" width="500px" src="https://raw.githubusercontent.com/William-Nogueira/landing-page-project/master/img/Landing-Page.png"/>
 </div>
