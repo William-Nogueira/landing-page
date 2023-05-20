@@ -1,5 +1,5 @@
 ## Nogueira Investimentos
-Landing page para uma instituição financeira, desenvolvida em HTML, CSS e JavaScript. O objetivo principal do projeto foi consolidar minhas habilidades na base do desenvolvimento front-end, antes de se aventurar em frameworks mais avançados.
+Landing page para uma instituição financeira, desenvolvida em HTML, CSS e JavaScript. O objetivo principal do projeto foi consolidar minhas habilidades na base do desenvolvimento front-end, antes de me aventurar em frameworks mais avançados.
 
 Live - https://nogueirainvest.netlify.app/
 
