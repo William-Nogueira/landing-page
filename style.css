@@ -825,10 +825,6 @@ section {
   .container-noticias a:nth-child(3) {
     flex: 1;
   }
-
-  .article-noticias-descricao {
-    overflow: scroll;
-  }
 }
 
 /* Ficou com alguma dúvida? */
